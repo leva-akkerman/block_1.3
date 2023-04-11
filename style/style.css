@@ -1,0 +1,317 @@
+@font-face {
+    font-family: "Impact", sans-serif;
+    src: url(../fonts/impact.woff2)
+}
+
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0   
+}
+
+a{
+    text-decoration: none;
+    color: inherit
+}
+button{
+    background-color: inherit;
+    border: none;
+}
+body{
+    min-width: 320px;
+    font-size: 14px;
+    font-family: "TTLakes";
+    background-color: #fff
+}
+
+ul{
+    display: flex;
+    list-style-type: none
+}
+
+.header {
+    display: flex;
+    height: 88px;
+    align-items: center;
+    border-bottom: #D9FFF5 solid 1px ;  
+}
+
+.header__burger {
+    height: 40px;
+    margin-left: 16px
+}
+
+.header__logo {
+    margin-left: 16px;
+    margin-right: auto 
+}
+
+.header__menu{
+    display: flex;
+    gap: 16px;
+    margin-right: 16px
+
+}
+
+.header__item:nth-of-type(3){
+    margin-right: 32px 
+}
+
+.header__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px
+}
+
+.header__item:nth-last-of-type(2)::before{
+    content: "";
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    position: absolute;   
+    margin-left: -20px;
+    margin-top: 4px;
+} 
+
+.header__icon {
+    width: 40px;
+    height: 40px; 
+}
+
+.main {
+    background-color: #f8f8f8;
+    padding-top: 24px;
+    padding-left: 16px;
+}
+
+.main__title {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 24px
+}
+
+.main__title::before{
+    content: "";
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    position: absolute;
+    margin-left: -16px;
+    -top: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.main__list {
+    overflow-x: scroll;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 25px;
+    padding-right: 37px;
+    white-space: nowrap;
+    justify-content: space-between;
+    margin-bottom: 24px; 
+}
+
+.main__item {
+    width: auto;
+}
+
+.main__item:hover{
+    border: 2px solid #B8FFEC;
+    border-radius: 4px;
+    padding: 8px 10px 8px 16px;
+    height: 40px;
+}
+
+.main__item--desktop{
+    display: none
+}
+
+.main__link {
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #7E7E82;
+    letter-spacing: -0.2px;
+}
+
+.main__promo {
+    display: flex;
+    flex-direction: column;  
+}
+
+.main__container{
+    height: 50%;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 
+}
+
+.main__excerpt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 90px;;
+    margin-right: 16px;
+    overflow-y: hidden;
+}
+
+.main__text{
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    display: block
+}
+
+.main__read-more{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    display: flex;
+    width: 124PX;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+    margin-bottom: 16px;
+}
+
+.main__image-logo{
+    flex-basis: 50%;
+    margin-left: -16px;
+    border-radius: 6px; 
+}
+
+.header__item--tablet{
+    display: none
+}
+
+@media (min-width: 600px){
+
+    .header__item--tablet{
+        display: block
+    }
+
+    .main__promo{
+        flex-direction: row
+    }
+
+    .main__excerpt{
+        height: 150px;
+    }
+
+    .main{
+        padding-left: 24px
+    }
+
+    .main__title{
+        margin-bottom: 32px;  
+    }
+
+    .main__excerpt{
+        margin-right: 47px;
+    }
+
+    .main__title::before{
+        margin-left: -24px;
+    }
+
+    .main__list{
+        margin-bottom: 32px;
+    }
+
+    .main__read-more{
+        margin-left: 9px;
+    }
+
+    .main__image-logo{
+        margin-left: 0;
+        margin-right: 25px
+    }
+    
+}
+@media (min-width: 1120px){
+    .header{
+        border-bottom: 0;
+    }
+
+    .main{
+        padding-left: 32px;
+        padding-top: 42px;
+    }
+
+    .main__list{
+        overflow-x: visible;
+        flex-wrap: wrap;
+    }
+
+    .main__excerpt{
+        height: auto;
+        margin: 0 36px 0 2px
+    }
+
+    .main__title{
+        margin-bottom: 8.34px
+    }
+
+    .main__container{
+        gap: 8px;
+    }
+
+    .main__list{
+        margin-bottom: 11.22px
+    }
+
+    .main__image-logo{
+        margin-right: 29px
+    }
+
+    .main__title::before{
+        margin-left: -32px;
+    }
+
+    .header__burger, .header__logo-img, .header__item--tablet{
+        display: none
+    }
+
+    .header{
+        position: absolute;
+        width: 100%;
+    }
+
+    .header__item{
+        margin-right: 32px
+    }
+
+    .header__item:nth-last-of-type(2)::before{
+        content: "Оставить заявку";
+        width: auto;
+        height: auto;
+        background-color: inherit;
+        position: static;   
+        margin-left: 0;
+        margin-top: 0;
+        line-height: 24px;
+        color: #1B1C21;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+    } 
+
+    .header__item:nth-last-of-type(1)::before{
+        content: "Статус ремонта";
+        line-height: 24px;
+        color: #1B1C21;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        font-weight: 500  
+    }
+}
